@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import beersJSON from "./../assets/beers.json";
 import { useParams } from "react-router-dom";
-import AllBeersPage from "./AllBeersPage.jsx";
+// import AllBeersPage from "./AllBeersPage.jsx";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function BeerDetailsPage() {
   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.

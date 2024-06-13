@@ -9,7 +9,7 @@ function RandomBeersPage() {
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
   const navigate = useNavigate();
 
-  const ranAPI = "https://ih-beers-api2.herokuapp.com/beers/random";
+  // const ranAPI = "https://ih-beers-api2.herokuapp.com/beers/random";
 
   // TASKS:
   // 1. Set up an effect hook to make a request for a random beer from the Beers API.
