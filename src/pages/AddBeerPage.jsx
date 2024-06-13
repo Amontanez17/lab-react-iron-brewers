@@ -38,8 +38,8 @@ function AddBeerPage() {
       const newBeerData = {
         name: name,
         tagline: tagline,
-        description: description,
         image_url: imageUrl,
+        description: description,
         first_brewed: firstBrewed,
         brewers_tips: brewersTips,
         attenuation_level: attenuationLevel,
@@ -61,7 +61,7 @@ function AddBeerPage() {
   return (
     <>
       <div className="d-inline-flex flex-column w-100 p-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             className="form-control mb-4"
@@ -149,9 +149,7 @@ function AddBeerPage() {
             value={contributedBy}
             onChange={handleContributedBy}
           />
-          <button className="btn btn-primary btn-round" onClick={handleSubmit}>
-            Add Beer
-          </button>
+          <button className="btn btn-primary btn-round">Add Beer</button>
         </form>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import beersJSON from "./../assets/beers.json";
 import { useParams } from "react-router-dom";

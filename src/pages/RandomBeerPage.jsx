@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
+import axios from "axios";
 
 function RandomBeersPage() {
   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.
@@ -9,7 +10,21 @@ function RandomBeersPage() {
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
   const navigate = useNavigate();
 
-  // const ranAPI = "https://ih-beers-api2.herokuapp.com/beers/random";
+  const ranAPI = "https://ih-beers-api2.herokuapp.com/beers/random";
+  async function getRandomBeer() {
+    try {
+      const response = await axios.get(ranAPI);
+      const beers = response.data;
+      setRandomBeer(beers);
+      console.log(beers);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getRandomBeer();
+  }, []);
 
   // TASKS:
   // 1. Set up an effect hook to make a request for a random beer from the Beers API.
